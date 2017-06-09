@@ -48,7 +48,7 @@ request('/make-dump?dbName=' + dbName, (data) => {
     process.exit(1);
   }
   console.log('Downloading ' + data.file);
-  const filePath = __dirname + '/' + dbName + '.tgz';
+  const filePath = __dirname + '/dump/' + dbName + '.tgz';
 
   _request(data.file, filePath, () => {
     console.log('done');
